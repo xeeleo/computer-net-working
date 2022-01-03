@@ -701,7 +701,7 @@ public class MultiWebServer {
     public static void main(String[] args){
 
 
-        while (true) {     //添加这个死循环使得html中的图片也被当成了一次http请求，所以会产生两次请求，当网页中的图片更多时，也许会产生更多http请求头
+        while (true) {     //http1.1 ：html中的图片也会发送一次http请求，所以会产生两次请求，当网页中的图片更多时，会产生更多http请求头
 
             try {
                 BufferedReader bufferedReader0 = new BufferedReader(
